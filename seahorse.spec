@@ -1,11 +1,11 @@
 Summary:	GNOME application for managing encryption keys
 Name:		seahorse
-Version:	3.6.3
+Version:	3.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	bc4ffc588015f014c8b03058f91c0d58
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.8/%{name}-%{version}.tar.xz
+# Source0-md5:	b14d41ca6d71a830ac8011c196af37fa
 URL:		http://www.gnome.org/projects/seahorse/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,8 +27,8 @@ BuildRequires:	pkg-config
 Requires(post,postun):	glib-gio-gsettings
 Requires(post,postun):	gtk+-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
-Requires:	gcr
-Requires:	gnome-keyring
+Requires:	gcr >= 3.8.0
+Requires:	gnome-keyring >= 3.8.0
 Requires:	gnupg
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
