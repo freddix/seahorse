@@ -1,11 +1,11 @@
 Summary:	GNOME application for managing encryption keys
 Name:		seahorse
-Version:	3.10.1
+Version:	3.10.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	898450b7d4f96dc76658ba2d2b849303
+# Source0-md5:	4ef2c41a60513c57588e71db35543022
 URL:		http://www.gnome.org/projects/seahorse/
 BuildRequires:	autoconf
 BuildRequires:	automake
