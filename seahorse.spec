@@ -1,18 +1,17 @@
 Summary:	GNOME application for managing encryption keys
 Name:		seahorse
-Version:	3.10.2
+Version:	3.12.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	4ef2c41a60513c57588e71db35543022
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.12/%{name}-%{version}.tar.xz
+# Source0-md5:	9cc6e4f4ede81290ea6cc4d2f73b7b36
 URL:		http://www.gnome.org/projects/seahorse/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
-BuildRequires:	gcr-devel >= 3.10.0
+BuildRequires:	gcr-devel >= 3.12.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-doc-utils
 BuildRequires:	gnupg
 BuildRequires:	gobject-introspection-devel >= 1.38.0
 BuildRequires:	gpgme-devel
@@ -25,8 +24,8 @@ BuildRequires:	pkg-config
 Requires(post,postun):	glib-gio-gsettings
 Requires(post,postun):	gtk+-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
-Requires:	gcr >= 3.10.0
-Requires:	gnome-keyring >= 3.10.0
+Requires:	gcr >= 3.12.0
+Requires:	gnome-keyring >= 3.12.0
 Requires:	gnupg
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,15 +60,16 @@ Search result provider for GNOME Shell.
 	--disable-silent-rules			\
 	--disable-static			\
 	--enable-pgp
-%{__make} -j1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/GConf
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
 
 %find_lang %{name} --with-gnome --with-omf
 
