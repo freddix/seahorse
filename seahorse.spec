@@ -1,19 +1,19 @@
 Summary:	GNOME application for managing encryption keys
 Name:		seahorse
-Version:	3.12.0
+Version:	3.14.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	9cc6e4f4ede81290ea6cc4d2f73b7b36
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/seahorse/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	1c54bb9030ff054b870d79e86b91de6b
 URL:		http://www.gnome.org/projects/seahorse/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
-BuildRequires:	gcr-devel >= 3.12.0
+BuildRequires:	gcr-devel >= 3.14.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnupg
-BuildRequires:	gobject-introspection-devel >= 1.38.0
+BuildRequires:	gobject-introspection-devel >= 1.42.0
 BuildRequires:	gpgme-devel
 BuildRequires:	intltool
 BuildRequires:	libnotify-devel
@@ -24,8 +24,8 @@ BuildRequires:	pkg-config
 Requires(post,postun):	glib-gio-gsettings
 Requires(post,postun):	gtk+-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
-Requires:	gcr >= 3.12.0
-Requires:	gnome-keyring >= 3.12.0
+Requires:	gcr >= 3.14.0
+Requires:	gnome-keyring >= 3.14.0
 Requires:	gnupg
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
